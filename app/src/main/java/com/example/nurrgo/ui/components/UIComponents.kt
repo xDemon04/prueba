@@ -7,7 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.RoundedCornerShape // Importar de Material3
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -29,6 +29,7 @@ import com.example.nurrgo.ui.theme.AppColors
 import com.example.nurrgo.ui.theme.AppShapes
 import com.example.nurrgo.ui.theme.AppSpacing
 import com.example.nurrgo.ui.theme.AppTypography
+import androidx.compose.material3.Shape // Importar Shape de Material3
 
 // Enhanced Button Component
 @Composable
@@ -209,7 +210,7 @@ enum class ButtonSize {
 fun AppCard(
     modifier: Modifier = Modifier,
     elevation: CardElevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
-    shape: RoundedCornerShape = AppShapes.medium,
+    shape: Shape = AppShapes.medium, // Usar el tipo explícito de Material3.Shape
     containerColor: Color = AppColors.Surface,
     content: @Composable () -> Unit
 ) {

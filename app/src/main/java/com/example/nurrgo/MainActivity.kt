@@ -13,7 +13,6 @@ import androidx.compose.runtime.remember // Importación faltante
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavOptionsBuilder.popUpTo // Importación específica para popUpTo
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -62,6 +61,7 @@ fun AppNavigation(sessionManager: SessionManager) {
         }
         composable("register") {
             RegisterScreen(
+
                 sessionManager = sessionManager,
                 onRegisterSuccess = {
                     navController.navigate("main") {
