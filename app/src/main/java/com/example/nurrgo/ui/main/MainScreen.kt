@@ -88,7 +88,13 @@ fun MainScreen(onNavigateToDriver: () -> Unit) {
         }
 
         if (showRechargeDialog) {
-            RechargeDialog(onDismiss = { showRechargeDialog = false })
-        }
+        RechargeDialog(
+            onDismiss = { showRechargeDialog = false },
+            onConfirm = { amount -> 
+                // Aquí iría la lógica para procesar la recarga
+                showRechargeDialog = false
+            }
+        )
+    }
     }
 }
