@@ -48,7 +48,7 @@ fun HomeScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
-                .clip(RoundedCornerShape(topStart = AppShapes.large.topStart, topEnd = AppShapes.large.topEnd))
+                .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
                 .background(MaterialTheme.colorScheme.surface)
                 .padding(AppSpacing.md),
             shadowElevation = AppSpacing.sm // Añadir una sombra para que "flote"
