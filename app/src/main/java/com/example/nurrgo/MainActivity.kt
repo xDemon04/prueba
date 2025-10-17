@@ -9,11 +9,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import android.content.Context
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember // Importación faltante
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavOptionsBuilder.popUpTo // Importación específica para popUpTo
+import androidx.navigation.NavOptionsBuilder.popUpTo
+import com.example.nurrgo.data.SessionManager
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController

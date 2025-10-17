@@ -48,6 +48,56 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+    
+    // Material Design
+    implementation("androidx.compose.material3:material3:1.3.1")
+    implementation("androidx.compose.material:material:1.6.3")
+    implementation("androidx.compose.ui:ui:1.6.3")
+    implementation("androidx.compose.foundation:foundation:1.6.3")
+    
+    // Navegación
+    implementation("cafe.adriel.voyager:voyager-navigator:1.0.0")
+    implementation("cafe.adriel.voyager:voyager-transitions:1.0.0")
+    implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0")
+    
+    // Networking
+    implementation("io.ktor:ktor-client-core:2.3.8")
+    implementation("io.ktor:ktor-client-cio:2.3.8")
+    implementation("io.ktor:ktor-client-okhttp:2.3.8")
+    implementation("io.ktor:ktor-client-json:2.3.8")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
+    implementation("io.ktor:ktor-client-websockets:2.3.8")
+    
+    // Serialización
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    
+    // Imágenes
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+    implementation("io.coil-kt.coil3:coil-network-ktor2:3.1.0")
+    implementation("io.coil-kt.coil3:coil-network-ktor3:3.1.0")
+    
+    // Fecha y hora
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
+    implementation("network.chaintech:kmp-date-time-picker:1.0.7")
+    
+    // Almacenamiento de preferencias
+    implementation("com.russhwolf:multiplatform-settings-no-arg:1.3.0")
+    
+    // Escaneo de códigos QR y barras
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("network.chaintech:qr-kit:3.0.6")
+    
+    // Mapas
+    implementation("org.osmdroid:osmdroid-android:6.1.18")
+    
+    // Ubicación
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    
+    // Firebase
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
