@@ -7,7 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.RoundedCornerShape // Importar de Material3
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -29,7 +29,7 @@ import com.example.nurrgo.ui.theme.AppColors
 import com.example.nurrgo.ui.theme.AppShapes
 import com.example.nurrgo.ui.theme.AppSpacing
 import com.example.nurrgo.ui.theme.AppTypography
-import androidx.compose.material3.Shape // Importar Shape de Material3
+import androidx.compose.ui.graphics.Shape
 
 // Enhanced Button Component
 @Composable
@@ -296,7 +296,7 @@ fun AppTextField(
                 text = errorMessage,
                 color = AppColors.Error,
                 style = AppTypography.bodyMedium,
-                modifier = Modifier.padding(start = AppSpacing.sm, top = AppSpacing.xs)
+                modifier = Modifier.padding(start = AppSpacing.sm, top = 4.dp)
             )
         }
     }
