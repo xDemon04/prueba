@@ -105,16 +105,23 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
+    implementation("io.ktor:ktor-client-auth:2.3.8")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
     implementation("com.google.maps.android:maps-compose:4.3.3")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("org.slf4j:slf4j-simple:2.0.9")
 
     // Ktor
-    implementation("io.ktor:ktor-client-core:2.3.8")
-    implementation("io.ktor:ktor-client-android:2.3.8")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.8")
-    implementation("io.ktor:ktor-client-resources:2.3.8")
+    // Dependencias base de Ktor
+    implementation("io.ktor:ktor-client-core:2.3.7")
+    implementation("io.ktor:ktor-client-cio:2.3.7")
+
+    // Añadir esta dependencia para resolver el error de HttpTimeout
+    implementation("io.ktor:ktor-client-core-jvm:2.3.7")
+
+    // Si necesitas más funcionalidades de Ktor, también puedes agregar:
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
 
     // Kotlinx Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
