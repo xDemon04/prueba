@@ -1,6 +1,6 @@
 package com.example.nurrgo.ui.theme
 
-import androidx.compose.material3.RoundedCornerShape // Importar de Material3
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.ui.graphics.Color
