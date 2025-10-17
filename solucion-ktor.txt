@@ -1,0 +1,41 @@
+Para solucionar el error "NoClassDefFoundError: Failed resolution of: Lio/ktor/client/plugins/HttpTimeout", necesitas agregar las siguientes dependencias a tu archivo build.gradle.kts:
+
+// Para un proyecto Android estándar
+dependencies {
+    // Dependencias base de Ktor
+    implementation("io.ktor:ktor-client-core:2.3.7")
+    implementation("io.ktor:ktor-client-cio:2.3.7")
+    
+    // Añadir esta dependencia para resolver el error de HttpTimeout
+    implementation("io.ktor:ktor-client-core-jvm:2.3.7")
+    
+    // Si necesitas más funcionalidades de Ktor, también puedes agregar:
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
+}
+
+// Para un proyecto Kotlin Multiplatform (KMP)
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            // Dependencias base de Ktor
+            implementation("io.ktor:ktor-client-core:2.3.7")
+            implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
+        }
+        
+        androidMain.dependencies {
+            // Añadir estas dependencias para resolver el error de HttpTimeout
+            implementation("io.ktor:ktor-client-android:2.3.7")
+            implementation("io.ktor:ktor-client-core-jvm:2.3.7")
+        }
+        
+        iosMain.dependencies {
+            implementation("io.ktor:ktor-client-darwin:2.3.7")
+        }
+    }
+}
+
+Después de agregar estas dependencias, sincroniza tu proyecto con Gradle y el error debería resolverse.
+
+Nota: La versión 2.3.7 es un ejemplo, deberías usar la misma versión que estás utilizando para las otras dependencias de Ktor en tu proyecto.
