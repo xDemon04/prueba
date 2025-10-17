@@ -63,6 +63,7 @@ fun AppNavigation(sessionManager: SessionManager) {
         }
         composable("register") {
             RegisterScreen(
+
                 sessionManager = sessionManager,
                 onRegisterSuccess = {
                     navController.navigate("main") {
